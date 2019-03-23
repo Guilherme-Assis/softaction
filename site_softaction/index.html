@@ -25,7 +25,8 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/infinite-slider.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
 
@@ -202,101 +203,21 @@
 				<h3>Nossos clientes</h3>
 			</div><!-- end title -->
 	
-			<div class="row">
-				<div class="col-md-4">
-					<img src="./images/festtiva.png" alt="" srcset="" style="width: 50%">
-				</div>
-				<div class="col-md-4">
-					<img src="./images/blend.png" alt="" srcset="" style="width: 50%">
-				</div>
-				<div class="col-md-4">
-					<img src="./images/reisetur.png" alt="" srcset="" style="width: 50%">
-				</div>
-			</div>
+			<div class="container">
+				<section class="customer-logos slider">
+				  <div class="slide"><img src="images/reisetur.png"></div>
+				  <div class="slide"><img src="images/festtiva.png"></div>
+				  <div class="slide"><img src="images/blend.png"></div>
+				  <div class="slide"><img src="images/bellks.jpg"></div>
+				  <div class="slide"><img src="images/reisetur.png"></div>
+				  <div class="slide"><img src="images/festtiva.png"></div>
+				  <div class="slide"><img src="images/blend.png"></div>
+				  <div class="slide"><img src="images/bellks.jpg"></div>
+				</section>
+			  </div>
 		</div>
 	</div>
-	<!-- <div id="portfolio" class="section lb">
-		<div class="container">
-			<div class="section-title text-center">
-                <h3>Portfolio</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div> --><!-- end title -->
-			
-			<!-- <div class="gallery-menu row">
-				<div class="col-md-12">
-					<div class="button-group filter-button-group text-center">
-						<button class="active" data-filter="*">Todos</button>
-						<button data-filter=".gal_a">WebSites</button>
-						<button data-filter=".gal_b">Sistemas</button>
-						<button data-filter=".gal_c">APP</button>
-					</div>
-				</div>
-			</div>
-			
-			<div class="gallery-list row">
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-01.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-02.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-03.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-04.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-05.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-05.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-06.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-	</div> -->
-	
-	
-	
-	
-	
-	
+
     <div id="contact" class="section db">
         <div class="container">
             <div class="section-title text-center">
@@ -377,6 +298,31 @@
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
 	<script src="js/jquery.vide.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script>
+	$(document).ready(function () {
+		$('.customer-logos').slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			arrows: false,
+			dots: false,
+			pauseOnHover: false,
+			responsive: [{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 4
+				}
+			}, {
+				breakpoint: 520,
+				settings: {
+					slidesToShow: 3
+				}
+			}]
+		});
+	});
+	</script>
 	
 	
 
